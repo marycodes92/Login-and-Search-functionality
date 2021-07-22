@@ -11,17 +11,17 @@ function validateDetails() {
     "/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/"
   const passwordFormat =
     '^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})'
+  
   if (!email && !password) {
     alert('Email and password field cannot be blank')
-  } else if (email == emailFormat && password == passwordFormat) {
+  }
+  else if (email == emailFormat && password == passwordFormat) {
     alert('User successfully logged In')
-  } else if (email != emailFormat && password != passwordFormat) {
+  }
+  else if (email != emailFormat && password != passwordFormat) {
     alert('Invalid email or password format')
-  } else if (
-    password !== '^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})'
-  ) {
-    alert(
-      'Password must contain at least One uppercase letter, one number and a special character and must not be less than 8',
-    )
+  }
+  else if (password !== '^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})') {
+    alert('Password must have at least One uppercase letter, one number and a special character and must not be less than 8')
   }
 }
